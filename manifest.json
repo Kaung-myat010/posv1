@@ -1,0 +1,21 @@
+{
+    "name": "Cafe POS",
+    "short_name": "POS",
+    "description": "A modern Point of Sale system for Kaung San Cafe",
+    "start_url": "/posv1/",
+    "display": "standalone",
+    
+    "icons": [
+      {
+        "src": "/posv1/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/posv1/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "scope": "/posv1/"
+  }
