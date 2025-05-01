@@ -12,10 +12,10 @@
 <meta name="apple-mobile-web-app-title" content="Kaung San Cafe POS">
 
   <title>Modern POS System</title> 
-  <link rel="apple-touch-icon" href="/posv1/assets/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" href="/posv1/icons/icon-192x192.png">
 <link rel="manifest" href="/posv1/manifest.json">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
-  <link rel="stylesheet" href="styles.css"> 
+  <link rel="stylesheet" href="/styles/main.css"> 
  <style type="text/css" id="dcoder_stylesheet">/* Global Styles - Glass Morphism Theme */
 :root {
     /* Dark Mode Colors (Unchanged) */
@@ -1497,7 +1497,7 @@ body.dark-mode .alert-warning { background-color: rgba(255, 165, 0, 0.2); color:
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script> 
-  <script src="script.js"></script> 
+  <script src="/script/main.js"></script> 
   <!-- Service Worker Registration -->
 <script>
     if ('serviceWorker' in navigator) {
@@ -1507,6 +1507,15 @@ body.dark-mode .alert-warning { background-color: rgba(255, 165, 0, 0.2); color:
           .catch(error => console.error('Service Worker registration failed:', error));
       });
     }
+
+    // iOS တွင် share functionality
+if (navigator.share) {
+  navigator.share({
+    title: 'POS App',
+    text: 'Check out this POS application',
+    url: 'https://kaung-myat010.github.io/posv1/'
+  });
+}
   </script>
  
 <script type="text/javascript" id="dcoder_script">document.addEventListener('DOMContentLoaded', () => {
