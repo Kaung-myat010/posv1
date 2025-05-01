@@ -2,8 +2,6 @@ const CACHE_NAME = 'posv1-cache-v1';
 const urlsToCache = [
   '/posv1/',
   '/posv1/index.html',
-  '/styles/main.css',
-  '/scripts/main.js',
   '/posv1/icons/icon-192x192.png',
   '/posv1/icons/icon-512x512.png'
 ];
