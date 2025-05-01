@@ -1508,14 +1508,18 @@ body.dark-mode .alert-warning { background-color: rgba(255, 165, 0, 0.2); color:
       });
     }
 
-    // iOS တွင် share functionality
-if (navigator.share) {
-  navigator.share({
-    title: 'POS App',
-    text: 'Check out this POS application',
-    url: 'https://kaung-myat010.github.io/posv1/'
-  });
-}
+document.getElementById('shareButton').addEventListener('click', async () => {
+    try {
+        await navigator.share({
+            title: 'POS App',
+            text: 'look this POS',
+            url: 'https://kaung-myat010.github.io/posv1/'
+        });
+        console.log('Sharing was not success');
+    } catch (error) {
+        console.error('Sharing was successful', error);
+    }
+});
   </script>
  
 <script type="text/javascript" id="dcoder_script">document.addEventListener('DOMContentLoaded', () => {
